@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    hikari:
+      auto-commit: true
+      connection-timeout: 30000
+      idle-timeout: 30000
+      max-lifetime: 2000000
+      minimum-idle: 1
+      maximum-pool-size: 2
+      pool-name: SpringBootHikariPooling
+    password: postgres
+    type: com.zaxxer.hikari.HikariDataSource
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postgres?autoreconnect=true
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
